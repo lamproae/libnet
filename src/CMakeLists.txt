@@ -7,7 +7,7 @@ file(GLOB header_files "include/*.h")
 
 add_library(${PROJECT_NAME} SHARED ${source_files})
 add_library(${PROJECT_NAME}_static STATIC ${source_files})
-SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 SET_TARGET_PROPERTIES(libnet PROPERTIES OUTPUT_NAME net)
 SET_TARGET_PROPERTIES(libnet_static PROPERTIES OUTPUT_NAME net_static)
 include_directories("${PROJECT_SOURCE_DIR}/include" "${PROJECT_SOURCE_DIR}/win32")
